@@ -104,8 +104,5 @@
     <Resource Include="Resources\Models\brian_02.obj">
       <Filter>Headers\Resources</Filter>
     </Resource>
-    <Resource Include="Resources\Models\brian_03.obj">
-      <Filter>Headers\Resources</Filter>
-    </Resource>
   </ItemGroup>
 </Project>
