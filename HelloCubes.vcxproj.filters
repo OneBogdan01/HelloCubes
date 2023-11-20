@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{9874e671-8509-4a31-8dc1-dc525e2aad71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{507f9185-428d-4a2e-86c1-3e0d8632faf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\Resources">
+      <UniqueIdentifier>{02923e1b-279d-4008-a54d-dcda1cb1b8b1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Graphics.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Input.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MyFiles.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ObjectModel.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="HelloCubes.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CubeModel.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ShipModel.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\TinyObjectLoader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\Graphics.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Input.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\MyFiles.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ObjectModel.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\stb_image.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\CubeModel.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ShipModel.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\tiny_obj_loader.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Textures\Harvey2.jpg">
+      <Filter>Headers\Resources</Filter>
+    </Image>
+    <Image Include="Resources\Models\brian_01.png">
+      <Filter>Headers\Resources</Filter>
+    </Image>
+    <Image Include="Resources\Models\brian_02.png">
+      <Filter>Headers\Resources</Filter>
+    </Image>
+    <Image Include="Resources\Models\brian_03.png">
+      <Filter>Headers\Resources</Filter>
+    </Image>
+    <Image Include="Resources\Models\brian_01_em.png">
+      <Filter>Headers\Resources</Filter>
+    </Image>
+    <Image Include="Resources\Models\brian_02_em.png">
+      <Filter>Headers\Resources</Filter>
+    </Image>
+    <Image Include="Resources\Models\brian_03_em.png">
+      <Filter>Headers\Resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Models\brian_01.mtl">
+      <Filter>Headers\Resources</Filter>
+    </None>
+    <None Include="Resources\Models\brian_02.mtl">
+      <Filter>Headers\Resources</Filter>
+    </None>
+    <None Include="Resources\Models\brian_03.mtl">
+      <Filter>Headers\Resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Models\brian_01.obj">
+      <Filter>Headers\Resources</Filter>
+    </Resource>
+    <Resource Include="Resources\Models\brian_02.obj">
+      <Filter>Headers\Resources</Filter>
+    </Resource>
+    <Resource Include="Resources\Models\brian_03.obj">
+      <Filter>Headers\Resources</Filter>
+    </Resource>
+  </ItemGroup>
+</Project>

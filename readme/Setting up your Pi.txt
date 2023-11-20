@@ -1,0 +1,54 @@
+
+Setting up a Pi4/Pi400
+
+In general you don't need to do too much to your Pi in order to use it as a target system, but there's a few tips that are sometimes needd with new fresh systems.
+
+
+Regardless of the model, its best to use a fresh clean install of Raspberry OS.
+If your card is freshly burned it will automatically update, but if not follow these instructions
+
+Make sure you connect your Pi to your internet, via a router or via ethernet (thats the best option)
+
+Open up your terminal and before you do anything update and upgrade using
+sudo apt update
+sudo apt upgrade
+
+This can take a while so make a cuppa. 
+
+Once its done, it may ask you to reset, if so, please do, but on return open up the raspberry menu (top left) and move to the Preferences/Raspberry Pi configuration options
+
+Here we can set up a few important things. In Interfaces make sure SSH and VNC are switched to enable. Make sure you press ok, it will close the window but you can reopen it again to set the memory.
+In performance make sure your GPU memory is set to 76 (or similar). On the Pi4 the system automatically allocates GPU memory when in use, but the OS reserves this 76mb for itself. If you are not already defaulting to 76mb it will ask to do a reset, please do.
+
+Now you have to include some important content, a maths lib and your graphic drivers.. 
+in your terminal again enter 
+git clone https://github.com/g-truc/glm.git
+then
+sudo apt-get install libgles2-mesa-dev -y
+yes thats not a typo it is libgles2 it also installs GLES3.x content.
+then
+sudo apt-get install libxrandr-dev -y
+
+There are other libs you may want to add later, so take note of how this works, Git is installing a source folder, other examples of source folders are raknet .. sudo apt-get is installing system libraries, other examples are bullet and OpenAL.... learn how to add libs
+
+These libs do have an unfortunate issue, they can generate a lot of warnings, its pointless to try to fix them, but consider wrapping appropriate pragmas around the libs when they are included. ie
+
+#pragma GCC diagnostic ignored "-Wuninitialized"
+
+Don't get too trigger happy with this though, re-enable the warnings after the includes are done.
+
+Now you need to decide if you are going to use it wireless or via cable..  for either you will need the IP address, there are different IP's for wireless and cable.
+
+If you choose cable, make sure your Pi is connected to either your PC or a suitable switch/router. A switch is the most reliable way, some PC's can be a little fussy about adding Pi's direct to their ports, we have no control over that and if your network needs settings changed to work you have to work them out yourself.
+
+After you decide the method, open a terminal and enter
+sudo ifconfig
+
+
+Take note of wlan IP address which is your wifi, and eth0 for the wired, look for the inet numbers, that is your IP address for each connection.
+If your PC and Pi are on the same network you can use either but ethernet is far faster and smoother for debugging.
+
+
+Thats it, your Pi is set up. Keep hold of that IP address and use it to set a connection to VS described in the redme chrome code (there may be an updated version on MS's site)
+
+
